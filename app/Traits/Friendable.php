@@ -2,7 +2,7 @@
 
 namespace App\Traits;
 
-use App\friendships;
+use App\friendship;
       
       trait Friendable
       {
@@ -13,7 +13,7 @@ use App\friendships;
          }
         public function addFriend($id)
         {
-        	$Friendship = friendships::create([
+        	$Friendship = friendship::create([
             'requester' => $this->id, // who is logged in
             'user_requested' => $id,
            ]);

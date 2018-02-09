@@ -6,6 +6,7 @@ Use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\User;
 use App\Profile;
+
 class DashboardProfileController extends Controller
 {
      public function edit($user_id)

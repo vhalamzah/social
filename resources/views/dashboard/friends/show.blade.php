@@ -19,7 +19,7 @@
                             </div>
                             
                             <div class="col-md-7 pull-left">
-                                <h3 style="margin:0px;"><a href="{{url('/profile')}}/{{$uList->slug}}">
+                                <h3 style="margin:0px;"><!--<a href="{{url('/profile')}}/{{$uList->name}}">-->
                                   {{ucwords($uList->name)}}</a></h3>
                                 <p><i class="fa fa-globe"></i> {{$uList->city}}  - {{$uList->country}}</p>
                                 <p>{{$uList->about}}</p>

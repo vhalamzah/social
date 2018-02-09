@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFriendshipsTable extends Migration
+class CreateNotificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateFriendshipsTable extends Migration
      */
     public function up()
     {
-        Schema::create('friendships', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('requester');
-            $table->integer('user_requested');
+        Schema::create('notifications', function (Blueprint $table) {
+             $table->increments('id');
+            $table->integer('user_logged'); // who loggedin
+            $table->integer('user_hero'); // second person he or she who accepted my request
             $table->boolean('status')->nullable();
+            $table->string('note');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateFriendshipsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('friendships');
+        Schema::dropIfExists('notifications');
     }
 }
